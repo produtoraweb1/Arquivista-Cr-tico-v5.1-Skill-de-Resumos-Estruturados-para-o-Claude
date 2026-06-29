@@ -1,65 +1,70 @@
-# 📚 Arquivista Crítico (v5.1) — Engenharia de Resumos Estruturados para o Claude
+# 📚 Arquivista Crítico (v5.1) — Engenharia de Resumos Estruturados via Claude Projects
 
 > **Sugestões de Títulos para o seu Repositório:**
-> * `claude-arquivista-critico`
-> * `knowledge-archivist-skill`
+> * `claude-project-arquivista-critico`
+> * `knowledge-archivist-project`
 > * `prompt-rag-resumo-critico`
 
 ## 🎯 Descrição do Projeto
 
-O **Arquivista Crítico** é uma especificação técnica de engenharia de prompt (Skill) desenhada para transformar o Claude (Anthropic) numa ferramenta avançada de **Análise Crítica e Auditoria Factual de Livros em PDF**. 
+O **Arquivista Crítico** é uma especificação técnica de engenharia de prompt desenhada para transformar a área de **Projetos (Projects)** do Claude (Anthropic) numa central automatizada de **Análise Crítica e Auditoria Factual de Livros em PDF**.
 
-Diferente de resumos passivos convencionais, esta skill força a IA a rodar um processo interno de auditoria (`<thinking>`) com ancoragem factual extrema. O sistema varre o arquivo anexado para mapear de forma cirúrgica o perfil cognitivo do autor (idiossincrasias, tom, vieses) e extrair os frameworks práticos mais importantes. O resultado é um arquivo condensado em Markdown (`.md`), blindado contra alucinações e otimizado estruturalmente para servir como uma **Base de Conhecimento Pessoal (Segunda Mente)** para consultas futuras de humanos ou de outras instâncias de IA, economizando milhares de tokens.
+Ao configurar esta Skill nas diretrizes estruturais do seu Claude Project, você elimina a necessidade de copiar e colar prompts manuais a cada conversa. Toda vez que iniciar um chat novo e anexar um livro dentro desse projeto, o Claude aplicará automaticamente um processo interno de auditoria (`<thinking>`) com ancoragem factual extrema. O sistema varre o arquivo anexado para mapear de forma cirúrgica o perfil cognitivo do autor (idiossincrasias, tom, vieses) e extrair os frameworks práticos mais importantes. O resultado é um arquivo condensado em Markdown (`.md`), blindado contra alucinações e otimizado para servir como uma **Base de Conhecimento Pessoal (Segunda Mente)** para consultas futuras de humanos ou de outras instâncias de IA, economizando milhares de tokens.
 
 ---
 
 ## 🧠 Benefícios Técnicos e Arquitetura Cognitiva
 
 Ao utilizar o **Arquivista Crítico**, você cria um pipeline de dados otimizado para Large Language Models (LLMs):
+* **Automação via Infraestrutura (No-Paste):** O prompt mestre fica fixado na memória raiz do projeto do Claude. Você só precisa arrastar e soltar o livro.
 * **Eficiência de Contexto (Token Saving):** Reduz um livro inteiro de ~400 páginas para uma estrutura densa de 2 a 3 páginas. Isso diminui o consumo de tokens em mais de 95% nas consultas subsequentes.
 * **Sandbox Baseado em Fatos:** Evita que o Claude misture o conteúdo do livro com alucinações geradas pelo senso comum da internet, restringindo a IA estritamente à lógica do autor.
 * **Rastreabilidade:** As exigências de citação de capítulos ou seções funcionam como um mecanismo ágil de checagem interna para auditoria humana rápida.
 
 ---
 
-## 📖 Instruções Claras de Uso (Workflow de Produção)
+## 📖 Instruções de Configuração e Uso (Workflow de Produção)
 
-### Passo 1: Preparação do Arquivo
-Certifique-se de que o PDF do livro possui uma camada de texto legível (OCR). Evite arquivos digitalizados puramente como imagem antiga, pois isso quebra las travas de validação estrita da IA.
+### Passo 1: Criar o Projeto no Claude
+1. Acesse o Claude.ai (necessário plano Pro ou Team).
+2. No menu lateral ou na página inicial, clique em **Projects** e selecione **Create Project**.
+3. Escolha um nome para o seu projeto (ex: *Arquivista Crítico de Livros*).
 
-### Passo 2: Geração do Resumo Crítico
-1. Abra um novo chat no **Claude (recomenda-se o modelo Claude 3.5 Sonnet ou superior)**.
-2. Faça o upload do arquivo PDF do livro.
-3. Copie o conteúdo completo do prompt presente no arquivo `instrucoes.md`.
-4. Cole o prompt na mesma mensagem do arquivo anexo e envie.
-5. Aguarde a IA processar a tag `<thinking>` (Raciocínio interno de auditoria) e estruturar a saída oficial.
+### Passo 2: Definir as Instruções Coletivas (Instanciação da Skill)
+1. Dentro do seu novo projeto, clique em **Set Custom Instructions** (Definir Instruções Personalizadas) no painel direito.
+2. Copie e cole todo o conteúdo do arquivo `instrucoes.md` deste repositório dentro da caixa de texto de instruções.
+3. Clique em **Save**. Pronto! A inteligência de auditoria agora está congelada na raiz de todos os chats que você abrir aqui dentro.
 
-### Passo 3: Armazenamento Estruturado (Segunda Mente)
-Copie a saída gerada pela IA e salve localmente num arquivo de texto usando a extensão `.md` (Markdown). Adote o seguinte padrão de nome de arquivo para organização:
+### Passo 3: Geração Automatizada do Resumo
+1. Com o projeto configurado, abra um novo chat **dentro dele**.
+2. Faça o upload do arquivo PDF do livro (certifique-se de que o PDF possui camada de texto legível por OCR).
+3. Escreva apenas uma mensagem simples de ativação, por exemplo: *"Gere o Resumo de Referência Futura deste livro."*
+4. O Claude processará a tag `<thinking>` em segundo plano e entregará a saída oficial rigorosamente estruturada.
+
+### Passo 4: Armazenamento Estruturado (Segunda Mente)
+Copie a saída gerada e salve localmente num arquivo de texto usando a extensão `.md` (Markdown). Adote o seguinte padrão de nome de arquivo para organização:
 `sobrenome-autor_titulo-do-livro.md` (Exemplo: `kahneman_rapido-e-devagar.md`).
-Guarde este arquivo no seu repositório local, Notion, Obsidian ou na sua pasta de conhecimento.
 
 ---
 
 ## 🚀 Exemplos Práticos de Uso para Consultas Avançadas
 
-Depois de mapear seus livros usando a skill, você pode cruzar os dados ou aplicar os resumos gerados em cenários do seu dia a dia. Veja três exemplos de prompts avançados para usar no Claude:
+Depois de mapear seus livros técnicos, doutrinas ou manuais e alimentar o seu ecossistema, você poderá cruzar os dados ou aplicar os resumos gerados em cenários do seu dia a dia profissional. Veja estes três exemplos de prompts avançados para usar no Claude:
 
-### 🌟 Exemplo 1: Alinhamento de Expectativas e Conflitos (Liderança)
-> **Contexto:** Você gerou o resumo crítico do livro *"Conversas Difíceis"*.
+### 🌟 Exemplo 1: Psicologia e Saúde Mental (Formulações Clínicas e Abordagens)
+> **Contexto:** Você gerou o resumo crítico de um manual clássico sobre Terapia Cognitivo-Comportamental (TCC) ou um tratado de psicopatologia de referência.
 >
 > **Prompt para o Claude:**
-> *"Claude, estou a estruturar a estratégia de liderança e comunicação da minha startup durante uma fase crítica de pivotagem de produto. Vou anexar aqui o **Resumo de Referência Futura** do livro 'Conversas Difíceis' que geramos anteriormente. Com base estritamente no perfil cognitivo do autor e nos frameworks de 'Distinção entre Intenção e Impacto' mapeados nas seções 2 e 3 deste resumo, forneça-me um roteiro prático passo a passo de como devo abordar o meu cofundador sem criar atritos desnecessários."*
+> *"Claude, estou estruturando a formulação de caso de um paciente fictício que apresenta sintomas acentuados de ansiedade generalizada e padrões repetitivos de catastrofização. Estou anexando o **Resumo de Referência Futura** do livro de TCC que consolidamos no projeto. Com base estritamente nos frameworks de 'Identificação de Pensamentos Automáticos' e 'Questionamento Socrático' mapeados na Seção 3 e herdando as lentes metodológicas do autor detalhadas na Seção 2, crie uma estratégia de intervenção contendo 3 perguntas reflexivas para a próxima sessão. Não utilize abordagens fora do escopo deste resumo."*
 
-### 🌟 Exemplo 2: Tomada de Decisão e Estruturação de Processos (Cenário Corporativo)
-> **Contexto:** Você gerou o resumo crítico do livro *"Princípios"* do Ray Dalio.
+### 🌟 Exemplo 2: Advocacia e Direito (Análise de Casos com base em Livros de Leis/Doutrinas)
+> **Contexto:** Você gerou o resumo crítico de um livro de doutrina jurídica robusta ou comentários estruturados a códigos legais.
 >
 > **Prompt para o Claude:**
-> *"Claude, estou reestruturando a dinâmica de rituais e reuniões semanais da minha equipe de operações para mitigar erros de comunicação ocultos. Estou anexando o **Resumo de Referência Futura** do livro 'Princípios' (Ray Dalio) que consolidamos. Com base estritamente no padrão de argumentação do autor e nos frameworks de 'Verdade Radical e Transparência Radical' mapeados na Seção 3, crie um guia prático de 4 regras de conduta para as nossas reuniões. Certifique-se de herdar o tom dogmático e analítico do autor descrito na Seção 2."*
+> *"Claude, estou analisando um caso complexo de quebra de contrato comercial devido a um evento de força maior imprevisto. Anexei aqui o **Resumo de Referência Futura** do livro de Doutrina de Direito Civil sobre Responsabilidade Contratual que mapeamos anteriormente. Utilizando exclusivamente a interpretação do autor sobre o nexo de causalidade e as excludentes de responsabilidade civil documentadas na Seção 3, faça um parecer preliminar apontando os pontos fortes e os pontos fracos do argumento da nossa defesa. Cite os termos originais e jargões do autor mapeados na Seção 4 (Glossário)."*
 
 ### 🌟 Exemplo 3: Engenharia de Produto, Inovação e Growth (Cenário Técnico)
 > **Contexto:** Você gerou o resumo crítico do livro *"O Dilema da Inovação"* de Clayton Christensen.
 >
 > **Prompt para o Claude:**
-> *"Claude, atuamos no mercado de SaaS para logística e um concorrente menor começou a oferecer uma ferramenta gratuita, simplificada, mas muito veloz, ameaçando nossa base de clientes de entrada. Anexei aqui o **Resumo de Referência Futura** do livro 'O Dilema da Inovação' (Clayton Christensen). Utilizando exclusivamente o conceito de 'Inovação Disruptiva vs. Sustentável' e as limitations de mercado documentadas nas seções 3 e 5 deste resumo, faça um diagnóstico do nosso cenário estratégico e sugira duas linhas de defesa que a nossa engenharia de produto pode adotar."*
-> 
+> *"Claude, atuamos no mercado de SaaS para logística e um concorrente menor começou a oferecer uma ferramenta gratuita, simplificada, mas muito veloz, ameaçando nossa base de clientes de entrada. Anexei aqui o **Resumo de Referência Futura** do livro 'O Dilema da Inovação' (Clayton Christensen). Utilizando exclusivamente o conceito de 'Inovação Disruptiva vs. Sustentável' e as limitações de mercado documentadas nas seções 3 e 5 deste resumo, faça um diagnóstico do nosso cenário estratégico e sugira duas linhas de defesa que a nossa engenharia de produto pode adotar."*
